@@ -1,0 +1,26 @@
+Run the following Script in PgAdmin
+
+CREATE TABLE public.users
+(
+    id integer NOT NULL DEFAULT nextval('users_id_seq'::regclass),
+    first_name character varying(50) COLLATE pg_catalog."default",
+    last_name character varying(50) COLLATE pg_catalog."default",
+    email character varying(100) COLLATE pg_catalog."default",
+    password character varying(250) COLLATE pg_catalog."default",
+    "createdAt" date,
+    "updatedAt" date,
+    CONSTRAINT users_pkey PRIMARY KEY (id)
+)
+
+
+CREATE TABLE public.employee
+(
+    id integer NOT NULL DEFAULT nextval('employee_id_seq'::regclass),
+    name character varying(50) COLLATE pg_catalog."default",
+    designation character varying(50) COLLATE pg_catalog."default",
+    office character varying(50) COLLATE pg_catalog."default",
+    salary integer,
+    "createdAt" date,
+    "updatedAt" date,
+    CONSTRAINT employee_pkey PRIMARY KEY (id)
+)
